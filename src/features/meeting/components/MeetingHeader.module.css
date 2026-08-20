@@ -1,0 +1,35 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-3) var(--space-4);
+  flex-shrink: 0;
+}
+
+.meetingId {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+}
+
+.right {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.statusPill {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+  font-size: var(--font-size-sm);
+  color: var(--color-warning);
+}
+
+.participantCount {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+}

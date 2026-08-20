@@ -1,0 +1,31 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.label {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.id {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: var(--font-size-sm);
+  color: var(--color-text-primary);
+  background: var(--color-bg-surface-raised);
+  border-radius: var(--radius-sm);
+  padding: var(--space-1) var(--space-2);
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.copied {
+  color: var(--color-success);
+}

@@ -1,0 +1,28 @@
+.invalidScreen {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-4);
+  text-align: center;
+  padding: var(--space-6);
+}
+
+.invalidTitle {
+  font-size: var(--font-size-lg);
+  margin: 0;
+}
+
+.invalidBody {
+  color: var(--color-text-secondary);
+  margin: 0;
+  max-width: 24rem;
+}
+
+.fullScreen {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

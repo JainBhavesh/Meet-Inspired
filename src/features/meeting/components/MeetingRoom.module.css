@@ -1,0 +1,24 @@
+.room {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.body {
+  flex: 1;
+  display: flex;
+  min-height: 0;
+}
+
+.stage {
+  flex: 1;
+  min-width: 0;
+  padding: var(--space-2) var(--space-4);
+}
+
+.fullScreen {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

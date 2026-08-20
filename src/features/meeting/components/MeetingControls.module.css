@@ -1,0 +1,19 @@
+.bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-3);
+  padding: var(--space-3) var(--space-4);
+  flex-shrink: 0;
+}
+
+.divider {
+  width: 1px;
+  height: 28px;
+  background: var(--color-border-subtle);
+  margin: 0 var(--space-1);
+}
+
+.leave {
+  margin-left: var(--space-2);
+}

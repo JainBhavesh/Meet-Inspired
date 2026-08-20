@@ -1,0 +1,12 @@
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-3);
+}
+
+.panel {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}

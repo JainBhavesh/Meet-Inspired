@@ -1,0 +1,30 @@
+.wrapper {
+  position: relative;
+  display: inline-flex;
+}
+
+.bubble {
+  position: absolute;
+  bottom: calc(100% + var(--space-2));
+  left: 50%;
+  transform: translateX(-50%) translateY(4px);
+  background: #1f1f1f;
+  color: var(--color-text-primary);
+  font-size: var(--font-size-sm);
+  padding: var(--space-1) var(--space-3);
+  border-radius: var(--radius-sm);
+  white-space: nowrap;
+  pointer-events: none;
+  opacity: 0;
+  box-shadow: var(--shadow-sm);
+  transition:
+    opacity var(--duration-fast) var(--easing-standard),
+    transform var(--duration-fast) var(--easing-standard);
+  z-index: 20;
+}
+
+.wrapper:hover .bubble,
+.wrapper:focus-within .bubble {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}

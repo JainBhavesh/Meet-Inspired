@@ -1,0 +1,10 @@
+.wrapper {
+  position: relative;
+}
+
+.controlsOverlay {
+  position: absolute;
+  left: 50%;
+  bottom: var(--space-4);
+  transform: translateX(-50%);
+}

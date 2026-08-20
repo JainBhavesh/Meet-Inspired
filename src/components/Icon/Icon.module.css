@@ -1,0 +1,20 @@
+.icon {
+  display: block;
+  flex-shrink: 0;
+}
+
+.spin {
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .spin {
+    animation-duration: 1.6s;
+  }
+}

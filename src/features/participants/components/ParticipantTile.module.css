@@ -1,0 +1,89 @@
+.tile {
+  position: relative;
+  background: var(--color-bg-tile);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  aspect-ratio: 16 / 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
+  min-height: 0;
+}
+
+/**
+ * Used in the main participant grid (not the screen-share filmstrip, which
+ * keeps the fixed aspect-ratio above for its small fixed-width thumbnails).
+ * Fills the grid cell exactly instead of deriving a height from width via
+ * aspect-ratio — with a single full-width column (one participant), that
+ * derived height can exceed the viewport entirely. Declared after .tile so
+ * it wins the cascade at equal specificity when both classes are applied.
+ */
+.fill {
+  aspect-ratio: unset;
+  width: 100%;
+  height: 100%;
+}
+
+.speaking {
+  outline: 3px solid var(--color-speaking-ring);
+  outline-offset: -3px;
+}
+
+.avatarWrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer {
+  position: absolute;
+  left: var(--space-2);
+  bottom: var(--space-2);
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+  max-width: calc(100% - var(--space-4));
+}
+
+.name {
+  background: rgba(0, 0, 0, 0.55);
+  color: var(--color-text-primary);
+  font-size: var(--font-size-sm);
+  padding: 2px var(--space-2);
+  border-radius: var(--radius-sm);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.micStatus,
+.connectionStatus {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  border-radius: var(--radius-full);
+  background: rgba(0, 0, 0, 0.55);
+  color: var(--color-text-primary);
+  flex-shrink: 0;
+}
+
+.connectionStatus {
+  color: var(--color-danger);
+}
+
+.screenShareBadge {
+  position: absolute;
+  top: var(--space-2);
+  left: var(--space-2);
+  background: rgba(0, 0, 0, 0.55);
+  color: var(--color-text-primary);
+  font-size: var(--font-size-sm);
+  padding: 2px var(--space-2);
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+}

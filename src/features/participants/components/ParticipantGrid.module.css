@@ -1,0 +1,63 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(var(--grid-columns, 2), minmax(0, 1fr));
+  /* Every row gets an equal share of the grid's own (bounded) height,
+     rather than rows sizing to their tallest child. Tiles then fill their
+     cell exactly (see ParticipantTile.module.css) instead of deriving a
+     height from aspect-ratio off the cell's width — with a single
+     full-width column that derived height can exceed the viewport. */
+  grid-auto-rows: 1fr;
+  gap: var(--space-3);
+  width: 100%;
+  height: 100%;
+}
+
+.spotlightLayout {
+  display: flex;
+  flex-direction: row;
+  gap: var(--space-3);
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+}
+
+.spotlightMain {
+  flex: 1;
+  min-width: 0;
+}
+
+.filmstrip {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  overflow-y: auto;
+  padding-right: var(--space-1);
+  flex-shrink: 0;
+  width: 200px;
+}
+
+.filmstrip > * {
+  flex: 0 0 auto;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+}
+
+@media (max-width: 860px) {
+  .spotlightLayout {
+    flex-direction: column;
+  }
+
+  .filmstrip {
+    flex-direction: row;
+    overflow-x: auto;
+    overflow-y: visible;
+    padding-right: 0;
+    padding-bottom: var(--space-1);
+    width: 100%;
+  }
+
+  .filmstrip > * {
+    flex: 0 0 160px;
+    width: auto;
+  }
+}
